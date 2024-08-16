@@ -1,0 +1,25 @@
+*{
+    text-decoration: none;
+    padding: 0px;
+    margin: 0;
+}
+section{
+    height:100vh;
+    width: 100%;  
+}
+.header{
+    background-color: red;
+}
+.product{
+    background-color: blue;
+}
+.footer{
+    background-color: green;
+}
+nav{
+    display: flex;
+    gap: 5%;
+    height: 10vh;
+    background-color: black;
+    color: white;
+}
