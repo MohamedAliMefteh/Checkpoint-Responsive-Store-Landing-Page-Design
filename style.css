@@ -4,23 +4,17 @@
     margin: 0;
 }
  @import url('https://fonts.cdnfonts.com/css/typograph-pro?styles=30727,30728,30723,30724,30725,30726,30722');             
-section {
-   
-  
-}
 
 .header {
     display: grid;
     background-color: black;
-    
+    overflow-x: hidden;
 }
 
-.product {
-    background-color: blue;
-}
+
 
 .footer {
-    background-color: green;
+    height: 100vh;
 }
 nav {
     display: grid;
@@ -29,6 +23,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 5%;
+    min-height: 10vh;
     background-color: #0060AA;
     color: white;
     font-family: 'TYPOGRAPH PRO', sans-serif;
@@ -45,18 +40,17 @@ nav {
     grid-row-start: 1;
     margin-left: 50%;
 }
-a{
+nav a{
     color: white;
 }
 #slogan{
     grid-column-start: 3;
     grid-row-start: 1;
     font-size:  1.5rem;
-    margin-right: 5%;
 }
 #nav-bar-logo{
     text-align: left;
-    margin: 5%;
+    margin-left: 5%;
     font-size: 1.5rem;
 }
 .hero-section{
@@ -85,9 +79,6 @@ font-size: clamp(24px, calc(1.5rem + ((1vw - 6px) * 4.2254)), 70px);
     margin: 50px 0;
     font-size: clamp(10px, calc(1.5rem + ((1vw - 6px) * 2.2254)), 25px);
 }
-img{
-    
-}
 button{
     background:none;
     border:none;
@@ -106,8 +97,39 @@ button{
         left:-100px;
     }
 }
-
+@keyframes slideright {
+    to{
+        right:-100px;
+    }
+}
+    /*left slider*/
 .wrapper{
+    width: 90%;
+    margin-inline: auto;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to left,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1)20%,
+        rgba(0,0,0,1)80%,
+        rgba(0,0,0,0)
+    );
+    margin: 200px 0;
+}
+.holder{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: max(calc(100px * 9),100%);
+    animation-name: slideleft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+    /*right slider*/
+.wrapper-right{
     width: 90%;
     margin-inline: auto;
     position: relative;
@@ -120,17 +142,19 @@ button{
         rgba(0,0,0,1)80%,
         rgba(0,0,0,0)
     );
+    margin: 200px 0;
 }
-.holder{
+.holder-r{
     height: 100px;
     width: 100px;
     position: absolute;
-    left: max(calc(100px * 8),100%);
-    animation-name: slideleft;
+    right: max(calc(100px * 9),100%);
+    animation-name: slideright;
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+  /*Sponsors Slider*/
 
 .holder1 {
     animation-delay: calc(30s / 9 * (9 - 1) * -1);
@@ -158,5 +182,70 @@ button{
   } 
   .holder9 {
     animation-delay: calc(30s / 9 * (9 - 9) * -1);
-  } 
-  /*Sponsors Slider*/
+  }
+  
+/*boxes for product section*/
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    margin: 200px 10vw; 
+}
+.product a{
+    color: black;
+}
+
+.box{
+    height:300px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    background: #F0F0F0;
+    padding:10px 10px;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+#men{ 
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#women{
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#sales{
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.box-title{
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    font-family: 'TYPOGRAPH PRO', sans-serif;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    z-index: 1;
+}
+.box:hover{
+    background: radial-gradient(circle, rgba(0,96,170,0.76234243697479) 0%, rgba(0,96,170,0.9220063025210083) 50%, rgba(0,63,112,1) 100%);
+    scale: 1.2;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.box:hover #men{
+    transform: translate(-120px, -40px) rotate(-90deg) ;
+    
+} 
+.box:hover .box-title{
+    transform: translate(100px, 100px) ;  
+    text-align: center;
+    color: white;
+}
+.box:hover #women{
+    transform: translate(-100px, -40px) rotate(-90deg) ;
+    
+} 
+.box:hover #sales{
+    transform: translate(-100px, -40px) rotate(-90deg) ;
+    
+} 
