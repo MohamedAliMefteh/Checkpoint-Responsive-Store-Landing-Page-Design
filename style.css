@@ -1,251 +1,314 @@
 * {
-    text-decoration: none;
-    padding: 0px;
-    margin: 0;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0;
+  list-style: none;
 }
- @import url('https://fonts.cdnfonts.com/css/typograph-pro?styles=30727,30728,30723,30724,30725,30726,30722');             
+@import url("https://fonts.cdnfonts.com/css/typograph-pro?styles=30727,30728,30723,30724,30725,30726,30722");
 
 .header {
-    display: grid;
-    background-color: black;
-    overflow-x: hidden;
+  display: grid;
+  background-color: black;
+  overflow-x: hidden;
 }
 
-
-
-.footer {
-    height: 100vh;
-}
 nav {
-    display: grid;
-    grid-template-columns: 2fr 1fr 3fr ;
-    grid-template-rows: 1fr;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-    min-height: 10vh;
-    background-color: #0060AA;
-    color: white;
-    font-family: 'TYPOGRAPH PRO', sans-serif;
-    font-weight: bold;
-    text-align: center;                                         
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  min-height: 10vh;
+  background-color: #0060aa;
+  color: white;
+  font-family: "TYPOGRAPH PRO", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
 }
-.navicon1{
-    grid-column-start: 2;
-    grid-row-start: 1;
-    margin-right: 50%;
+#nav-bar-logo {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-left: 5%;
+  font-size: 1.5rem;
 }
-.navicon2{
-    grid-column-start: 2;
-    grid-row-start: 1;
-    margin-left: 50%;
+#nav-bar-logo img {
+  width: 60px;
 }
-nav a{
-    color: white;
+.navicon1 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  margin-right: 50%;
+  letter-spacing: 3px;
 }
-#slogan{
-    grid-column-start: 3;
-    grid-row-start: 1;
-    font-size:  1.5rem;
+.navicon2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  margin-left: 50%;
+  letter-spacing: 3px;
 }
-#nav-bar-logo{
-    text-align: left;
-    margin-left: 5%;
-    font-size: 1.5rem;
+a {
+  color: white;
 }
-.hero-section{
-    display: flex;
-    justify-content: space-around;
-    gap: 5vw;
-    /* display: grid;
+#slogan {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  font-size: 1.5rem;
+  justify-self: end;
+  margin-right: 5%;
+}
+.nav-icons {
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.nav-icons:hover {
+  color: #021b2e;
+  scale: 1.1;
+}
+.hero-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 5vw;
+  /* display: grid;
     grid-template-columns: 1fr 1fr; */
-    justify-items: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0 10vw;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 10vw;
 }
-.hero-title{
-    color: white;
-    text-align: left;
-    font-family: 'TYPOGRAPH PRO', sans-serif;
-    
-    
+.hero-title {
+  color: white;
+  text-align: left;
+  font-family: "TYPOGRAPH PRO", sans-serif;
 }
-.hero-title h1{
-margin: 50px 0;
-font-size: clamp(24px, calc(1.5rem + ((1vw - 6px) * 4.2254)), 70px);
+.hero-title h1 {
+  margin: 50px 0;
+  font-size: clamp(24px, calc(1.5rem + ((1vw - 6px) * 4.2254)), 70px);
 }
-.hero-title p{
-    margin: 50px 0;
-    font-size: clamp(10px, calc(1.5rem + ((1vw - 6px) * 2.2254)), 25px);
+.hero-title p {
+  margin: 50px 0;
+  font-size: clamp(10px, calc(1.5rem + ((1vw - 6px) * 2.2254)), 25px);
 }
-button{
-    background:none;
-    border:none;
-    color: black;
-    font-family: 'TYPOGRAPH PRO', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    background-color: white;
-    padding: 10px 30px;
-    margin-bottom: 50px;
+button {
+  background: none;
+  border: none;
+  color: black;
+  font-family: "TYPOGRAPH PRO", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  padding: 10px 30px;
+  margin-bottom: 50px;
 }
 
 /*Sponsors Slider*/
 @keyframes slideleft {
-    to{
-        left:-100px;
-    }
+  to {
+    left: -100px;
+  }
 }
 @keyframes slideright {
-    to{
-        right:-100px;
-    }
+  to {
+    right: -100px;
+  }
 }
-    /*left slider*/
-.wrapper{
-    width: 90%;
-    margin-inline: auto;
-    position: relative;
-    height: 100px;
-    overflow: hidden;
-    mask-image: linear-gradient(
-        to left,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1)20%,
-        rgba(0,0,0,1)80%,
-        rgba(0,0,0,0)
-    );
-    margin: 200px 0;
+/*left slider*/
+.slider {
+  display: flex;
+  justify-content: center;
 }
-.holder{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    left: max(calc(100px * 9),100%);
-    animation-name: slideleft;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+.wrapper {
+  width: 90%;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  margin: 10vh 0;
 }
-    /*right slider*/
-.wrapper-right{
-    width: 90%;
-    margin-inline: auto;
-    position: relative;
-    height: 100px;
-    overflow: hidden;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1)20%,
-        rgba(0,0,0,1)80%,
-        rgba(0,0,0,0)
-    );
-    margin: 200px 0;
+.holder {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: max(calc(100px * 9), 100%);
+  animation-name: slideleft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
-.holder-r{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    right: max(calc(100px * 9),100%);
-    animation-name: slideright;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+/*right slider*/
+.wrapper-right {
+  width: 90%;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  margin: 10vh 0;
 }
-  /*Sponsors Slider*/
+.holder-r {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  right: max(calc(100px * 9), 100%);
+  animation-name: slideright;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+/*Sponsors Slider*/
 
 .holder1 {
-    animation-delay: calc(30s / 9 * (9 - 1) * -1);
-  }
-.holder2 {
-    animation-delay: calc(30s / 9 * (9 - 2) * -1);
-  }
-.holder3 {
-    animation-delay: calc(30s / 9 * (9 - 3) * -1);
-  }
-.holder4 {
-    animation-delay: calc(30s / 9 * (9 - 4) * -1);
-  }
-.holder5 {
-    animation-delay: calc(30s / 9 * (9 - 5) * -1);
-  }
-.holder6 {
-    animation-delay: calc(30s / 9 * (9 - 6) * -1);
-  }
-.holder7 {
-    animation-delay: calc(30s / 9 * (9 - 7) * -1);
-  }
-.holder8 {
-    animation-delay: calc(30s / 9 * (9 - 8) * -1);
-  } 
-  .holder9 {
-    animation-delay: calc(30s / 9 * (9 - 9) * -1);
-  }
-  
-/*boxes for product section*/
-.product {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: white;
-    margin: 200px 10vw; 
+  animation-delay: calc(30s / 9 * (9 - 1) * -1);
 }
-.product a{
-    color: black;
+.holder2 {
+  animation-delay: calc(30s / 9 * (9 - 2) * -1);
+}
+.holder3 {
+  animation-delay: calc(30s / 9 * (9 - 3) * -1);
+}
+.holder4 {
+  animation-delay: calc(30s / 9 * (9 - 4) * -1);
+}
+.holder5 {
+  animation-delay: calc(30s / 9 * (9 - 5) * -1);
+}
+.holder6 {
+  animation-delay: calc(30s / 9 * (9 - 6) * -1);
+}
+.holder7 {
+  animation-delay: calc(30s / 9 * (9 - 7) * -1);
+}
+.holder8 {
+  animation-delay: calc(30s / 9 * (9 - 8) * -1);
+}
+.holder9 {
+  animation-delay: calc(30s / 9 * (9 - 9) * -1);
 }
 
-.box{
-    height:300px;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    background: #F0F0F0;
-    padding:10px 10px;
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+/*boxes for product section*/
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+  margin: 10vh 10vw;
 }
-#men{ 
-    transition-duration: 2s;
-    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+.product a {
+  color: black;
 }
-#women{
-    transition-duration: 2s;
-    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+.box {
+  height: 300px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(0, 96, 170, 0.07886904761904767) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 63, 112, 0.18531162464985995) 100%
+  );
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
-#sales{
-    transition-duration: 2s;
-    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+#men {
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.box-title{
-    transition-duration: 2s;
-    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    font-family: 'TYPOGRAPH PRO', sans-serif;
-    font-size: 2.5rem;
-    white-space: nowrap;
-    z-index: 1;
+#women {
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.box:hover{
-    background: radial-gradient(circle, rgba(0,96,170,0.76234243697479) 0%, rgba(0,96,170,0.9220063025210083) 50%, rgba(0,63,112,1) 100%);
-    scale: 1.2;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+#sales {
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.box:hover #men{
-    transform: translate(-120px, -40px) rotate(-90deg) ;
-    
-} 
-.box:hover .box-title{
-    transform: translate(100px, 100px) ;  
-    text-align: center;
-    color: white;
+.box-title {
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  font-family: "TYPOGRAPH PRO", sans-serif;
+  font-size: 2.5rem;
+  white-space: nowrap;
 }
-.box:hover #women{
-    transform: translate(-100px, -40px) rotate(-90deg) ;
-    
-} 
-.box:hover #sales{
-    transform: translate(-100px, -40px) rotate(-90deg) ;
-    
-} 
+.box::after {
+  content: "";
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(0, 96, 170, 0.76234243697479) 0%,
+    rgba(0, 96, 170, 0.9220063025210083) 50%,
+    rgba(0, 63, 112, 1) 100%
+  );
+  opacity: 0;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.box:hover:after {
+  opacity: 1;
+  border-radius: 20px;
+  z-index: -1;
+}
+.box:hover {
+  scale: 1.2;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.box:hover #men {
+  transform: translate(-120px, -40px) rotate(-90deg);
+}
+.box:hover .box-title {
+  transform: translate(100px, 100px);
+  text-align: center;
+  color: white;
+}
+.box:hover #women {
+  transform: translate(-100px, -40px) rotate(-90deg);
+}
+.box:hover #sales {
+  transform: translate(-100px, -40px) rotate(-90deg);
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #0060aa;
+  color: white;
+
+  font-family: "TYPOGRAPH PRO", sans-serif;
+  overflow-x: hidden;
+}
+.info {
+  display: flex;
+  width: 100%;
+  margin: 50px 0;
+  justify-content: space-around;
+  align-items: center;
+}
+hr {
+  width: 100%;
+}
+.socials {
+  text-align: center;
+  margin: 50px 0;
+}
