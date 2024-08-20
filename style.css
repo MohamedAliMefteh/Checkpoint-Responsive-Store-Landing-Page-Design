@@ -9,12 +9,12 @@
 .header {
   display: grid;
   background-color: black;
-  overflow-x: hidden;
+  
 }
 
 nav {
   display: grid;
-  grid-template-columns: 2fr 1fr 3fr;
+  grid-template-columns: 2fr 1fr 2fr;
   grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,10 @@ nav {
   font-family: "TYPOGRAPH PRO", sans-serif;
   font-weight: bold;
   text-align: center;
-  white-space: nowrap;
+  width: 100vw;
+}
+i .fa-bars{
+  display: none;
 }
 #nav-bar-logo {
   display: flex;
@@ -48,6 +51,7 @@ nav {
   grid-row-start: 1;
   margin-left: 50%;
   letter-spacing: 3px;
+  white-space: nowrap;
 }
 a {
   color: white;
@@ -85,11 +89,11 @@ a {
 }
 .hero-title h1 {
   margin: 50px 0;
-  font-size: clamp(24px, calc(1.5rem + ((1vw - 6px) * 4.2254)), 70px);
+  font-size:100px;
 }
 .hero-title p {
   margin: 50px 0;
-  font-size: clamp(10px, calc(1.5rem + ((1vw - 6px) * 2.2254)), 25px);
+  
 }
 button {
   background: none;
@@ -102,7 +106,9 @@ button {
   padding: 10px 30px;
   margin-bottom: 50px;
 }
-
+.heroimg{
+ width: 35vw;
+}
 /*Sponsors Slider*/
 @keyframes slideleft {
   to {
@@ -311,4 +317,90 @@ hr {
 .socials {
   text-align: center;
   margin: 50px 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .nav-icons, #slogan{
+    display: none;
+   }
+   nav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+   }
+   .fa-bars{
+    display: block;
+    margin-right: 5%;
+  }
+  .hero-section{
+    flex-direction: column;
+    
+  }
+  .hero-title{
+    text-align: center;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width:768px) {
+  .nav-icons, #slogan{
+    display: none;
+   }
+   nav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+   }
+   .fa-bars{
+    display: block;
+    margin-right: 5%;
+  }
+  .hero-section{
+    flex-direction: column;
+    
+  }
+  .hero-title{
+    text-align: center;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width:992px) {
+  .nav-icons{
+    display: none;
+   }
+   nav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+   }
+   .fa-bars{
+    display: block;
+    margin-right: 5%;
+  }
+  .hero-section{
+    flex-direction: column;
+    
+  }
+  .hero-title{
+    text-align: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and ((min-width: 992px) and (max-width:1199px)) {
+  .nav-icons{
+    display: none;
+   }
+   nav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+   }
+   .fa-bars{
+    display: block;
+    margin-right: 5%;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+ 
 }
