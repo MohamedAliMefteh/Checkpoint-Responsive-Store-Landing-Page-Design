@@ -5,9 +5,13 @@
   list-style: none;
 }
 @import url("https://fonts.cdnfonts.com/css/typograph-pro?styles=30727,30728,30723,30724,30725,30726,30722");
+body{
+  
+  
+}
 
 .header {
-  display: grid;
+  
   background-color: black;
   
 }
@@ -25,9 +29,9 @@ nav {
   font-family: "TYPOGRAPH PRO", sans-serif;
   font-weight: bold;
   text-align: center;
-  width: 100vw;
+  min-width: 300px;
 }
-i .fa-bars{
+#bars{
   display: none;
 }
 #nav-bar-logo {
@@ -80,6 +84,7 @@ a {
   justify-items: center;
   align-items: center;
   min-height: 100vh;
+  min-width: 100px;
   margin: 0 10vw;
 }
 .hero-title {
@@ -89,7 +94,7 @@ a {
 }
 .hero-title h1 {
   margin: 50px 0;
-  font-size:100px;
+  font-size:15px;
 }
 .hero-title p {
   margin: 50px 0;
@@ -209,17 +214,18 @@ button {
 .product {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  margin: 10vh 10vw;
+ 
 }
 .product a {
   color: black;
+  
 }
 
 .box {
-  height: 300px;
-  width: 400px;
+ 
   display: flex;
   align-items: center;
   background: radial-gradient(
@@ -329,7 +335,7 @@ hr {
     width: 100vw;
     justify-content: space-between;
    }
-   .fa-bars{
+   #bars{
     display: block;
     margin-right: 5%;
   }
@@ -339,6 +345,12 @@ hr {
   }
   .hero-title{
     text-align: center;
+  }
+  .box {
+    scale: 0.5;
+  }
+  .box a{
+    scale: 0.5;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -351,7 +363,7 @@ hr {
     width: 100vw;
     justify-content: space-between;
    }
-   .fa-bars{
+  #bars{
     display: block;
     margin-right: 5%;
   }
@@ -361,6 +373,9 @@ hr {
   }
   .hero-title{
     text-align: center;
+  }
+  .box{
+   
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -373,7 +388,7 @@ hr {
     width: 100vw;
     justify-content: space-between;
    }
-   .fa-bars{
+   #bars{
     display: block;
     margin-right: 5%;
   }
@@ -395,7 +410,7 @@ hr {
     width: 100vw;
     justify-content: space-between;
    }
-   .fa-bars{
+  #bars{
     display: block;
     margin-right: 5%;
   }
