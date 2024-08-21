@@ -111,9 +111,7 @@ button {
   padding: 10px 30px;
   margin-bottom: 50px;
 }
-.heroimg{
- width: 35vw;
-}
+
 /*Sponsors Slider*/
 @keyframes slideleft {
   to {
@@ -341,6 +339,10 @@ hr {
   }
   .hero-section{
     flex-direction: column;
+    gap: 0px;
+    margin: 0 20px;
+    justify-content: space-evenly;
+    height: 50vh;
     
   }
   .hero-title{
@@ -352,6 +354,11 @@ hr {
   .box a{
     scale: 0.5;
   }
+  .heroimg{
+    width: 297.5px;
+    transform: rotate(70deg);
+   }
+
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width:768px) {
@@ -369,6 +376,9 @@ hr {
   }
   .hero-section{
     flex-direction: column;
+    gap: 0px;
+    margin: 0 20px;
+    justify-content: space-evenly;
     
   }
   .hero-title{
@@ -377,6 +387,10 @@ hr {
   .box{
    
   }
+  .heroimg{
+    width: 297.5px;
+    transform: rotate(70deg);
+   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width:992px) {
@@ -394,11 +408,17 @@ hr {
   }
   .hero-section{
     flex-direction: column;
-    
+    gap: 0px;
+    margin: 0 20px;
+    justify-content: space-evenly;
   }
   .hero-title{
     text-align: center;
   }
+  .heroimg{
+    width: 396.6px;
+    transform: rotate(70deg);
+   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and ((min-width: 992px) and (max-width:1199px)) {
@@ -414,6 +434,9 @@ hr {
     display: block;
     margin-right: 5%;
   }
+  .heroimg{
+    width: 396.6px;
+   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
