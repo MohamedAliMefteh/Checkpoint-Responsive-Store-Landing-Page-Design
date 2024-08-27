@@ -91,7 +91,7 @@ a {
 }
 .hero-title h1 {
   margin: 50px 0;
-  font-size:15px;
+  font-size:clamp(1rem,6rem,3rem);
 }
 .hero-title p {
   margin: 50px 0;
