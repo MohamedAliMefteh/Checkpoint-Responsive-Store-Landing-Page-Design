@@ -1,3 +1,4 @@
+/* resetting proporeties for the whole html doc */
 * {
   text-decoration: none;
   padding: 0px;
@@ -5,17 +6,12 @@
   list-style: none;
 }
 @import url("https://fonts.cdnfonts.com/css/typograph-pro?styles=30727,30728,30723,30724,30725,30726,30722");
-body{
-  
-  
-}
-
 .header {
   
   background-color: black;
   
 }
-
+/* NAV-BAR propreties : grid.... and giving each element of the navbar its own proprety */
 nav {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
@@ -75,6 +71,7 @@ a {
   color: #021b2e;
   scale: 1.1;
 }
+/* hero section settings and elements of the hero section */
 .hero-section {
   display: flex;
   justify-content: space-around;
@@ -208,11 +205,11 @@ button {
   animation-delay: calc(30s / 9 * (9 - 9) * -1);
 }
 
-/*boxes for product section*/
+/*product section and boxes for product section*/
 .product {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
  
@@ -297,6 +294,7 @@ button {
 .box:hover #sales {
   transform: translate(-100px, -40px) rotate(-90deg);
 }
+/* footer section settings */
 .footer {
   display: flex;
   flex-direction: column;
