@@ -107,6 +107,15 @@ button {
   background-color: white;
   padding: 10px 30px;
   margin-bottom: 50px;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  
+  
+}
+button:hover{
+  scale: 1.5;
+  cursor: url('NNQ3000_WO_Configurator_Hands_5N.png'),pointer;
+  border-radius: 20px;
 }
 
 /*Sponsors Slider*/
